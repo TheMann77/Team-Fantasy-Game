@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://g7c4sw3c5m04"]
+
+[ext_resource type="Texture2D" uid="uid://bsbn0s2je8g5y" path="res://Images/Cross.png" id="1_yr1cy"]
+
+[node name="ScorePlayerPoint" type="Control"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -804.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 10.0
+offset_right = 380.0
+offset_bottom = 40.0
+color = Color(0, 0.129412, 0.278431, 1)
+
+[node name="PointType" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 200.0
+offset_bottom = 40.0
+
+[node name="Num" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 270.0
+offset_bottom = 40.0
+text = "1"
+placeholder_text = "#"
+alignment = 1
+max_length = 3
+
+[node name="Points" type="Label" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_right = 340.0
+offset_bottom = 40.0
+text = "Pts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Remove" type="TextureButton" parent="."]
+offset_left = 350.0
+offset_top = 9.0
+offset_right = 475.0
+offset_bottom = 134.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("1_yr1cy")

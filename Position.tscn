@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://btpoiuw0qb5hy"]
+
+[ext_resource type="Texture2D" uid="uid://bsbn0s2je8g5y" path="res://Images/Cross.png" id="1_vm71l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i7mlk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jh8m1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 270.0
+offset_bottom = 30.0
+color = Color(0, 0.129412, 0.278431, 1)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_right = 60.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i7mlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jh8m1")
+placeholder_text = "Pos"
+alignment = 1
+max_length = 3
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 247.5
+offset_top = 7.5
+offset_right = 347.5
+offset_bottom = 107.5
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("1_vm71l")
+
+[node name="InSquad" type="LineEdit" parent="."]
+offset_left = 60.0
+offset_right = 119.063
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i7mlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jh8m1")
+text = "1"
+placeholder_text = "#"
+alignment = 1
+max_length = 3
+
+[node name="MinInLineup" type="LineEdit" parent="."]
+offset_left = 120.0
+offset_right = 180.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i7mlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jh8m1")
+text = "1"
+placeholder_text = "#"
+alignment = 1
+max_length = 3
+
+[node name="MaxInLineup" type="LineEdit" parent="."]
+offset_left = 180.0
+offset_right = 240.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i7mlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jh8m1")
+text = "1"
+placeholder_text = "#"
+alignment = 1
+max_length = 3

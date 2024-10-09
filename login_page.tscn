@@ -1,0 +1,95 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3copj6f7qjwt"]
+
+[ext_resource type="Script" path="res://LoginPage.gd" id="1_6hrej"]
+
+[node name="LoginPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6hrej")
+
+[node name="Explanation" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -311.0
+offset_right = 150.0
+offset_bottom = -236.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "If you're signing up for the first time, create an email and password then press register"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="email" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 205.0
+offset_right = 340.0
+offset_bottom = 240.0
+placeholder_text = "Email"
+max_length = 254
+
+[node name="password" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 250.0
+offset_right = 340.0
+offset_bottom = 285.0
+placeholder_text = "Password (6-20 characters)"
+max_length = 20
+secret = true
+
+[node name="view" type="Button" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 295.0
+offset_right = 260.0
+offset_bottom = 326.0
+text = "View password"
+
+[node name="login" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 354.0
+offset_right = 190.0
+offset_bottom = 389.0
+text = "Login"
+
+[node name="register" type="Button" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 354.0
+offset_right = 340.0
+offset_bottom = 389.0
+text = "Register"
+
+[node name="Error" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -19.0
+offset_right = 150.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+
+[connection signal="button_down" from="view" to="." method="_on_view_button_down"]
+[connection signal="button_up" from="view" to="." method="_on_view_button_up"]
+[connection signal="pressed" from="login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="register" to="." method="_on_register_pressed"]

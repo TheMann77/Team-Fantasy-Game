@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpuqthqkaa5h8"]
+
+[ext_resource type="Script" path="res://navbar.gd" id="1_2pf5g"]
+[ext_resource type="PackedScene" uid="uid://cxwl23mff1grn" path="res://navbarButton.tscn" id="1_di1vb"]
+
+[node name="Navbar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2pf5g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+color = Color(0, 0.129412, 0.278431, 1)
+
+[node name="Points" parent="." instance=ExtResource("1_di1vb")]
+
+[node name="Pick Team" parent="." instance=ExtResource("1_di1vb")]
+
+[node name="Transfers" parent="." instance=ExtResource("1_di1vb")]
+
+[node name="Table" parent="." instance=ExtResource("1_di1vb")]
+
+[node name="Leagues" parent="." instance=ExtResource("1_di1vb")]

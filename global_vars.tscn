@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://du07cmvrv0uba"]
+
+[ext_resource type="Script" path="res://GlobalVars.gd" id="1_sfku8"]
+
+[node name="GlobalVars" type="Node"]
+script = ExtResource("1_sfku8")

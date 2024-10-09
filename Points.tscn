@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=3 uid="uid://byps8k5tdgu6l"]
+
+[ext_resource type="PackedScene" uid="uid://dpuqthqkaa5h8" path="res://navbar.tscn" id="1_8ejfy"]
+[ext_resource type="Script" path="res://points.gd" id="1_b247n"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b247n")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Navbar" parent="." instance=ExtResource("1_8ejfy")]
+layout_mode = 1
+
+[node name="GW" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = -185.0
+offset_bottom = 86.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Gameweek"
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 90.0
+offset_right = -185.0
+offset_bottom = 116.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Total score: "
+vertical_alignment = 1
+
+[node name="ActiveChip" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+offset_left = 10.0
+offset_top = 120.0
+offset_right = 124.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Active chip:"
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+offset_left = 10.0
+offset_top = 150.0
+offset_right = 380.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Team:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 180.0
+offset_right = -10.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(370, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Loading" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 158.0
+offset_top = 200.0
+offset_right = 233.0
+offset_bottom = 223.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Loading..."
+
+[node name="Back" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 312.0
+offset_top = 56.0
+offset_right = 382.0
+offset_bottom = 87.0
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,165 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3wcdtd7jymq6"]
+
+[ext_resource type="Script" path="res://PickTeam.gd" id="1_qr1sf"]
+[ext_resource type="PackedScene" uid="uid://dpuqthqkaa5h8" path="res://navbar.tscn" id="2_o0mlu"]
+
+[node name="PickTeam" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qr1sf")
+
+[node name="Navbar" parent="." instance=ExtResource("2_o0mlu")]
+layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GW" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = -185.0
+offset_bottom = 86.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Gameweek"
+vertical_alignment = 1
+
+[node name="Deadline" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 91.0
+offset_right = -10.0
+offset_bottom = 117.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Deadline:"
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+offset_left = 10.0
+offset_top = 156.0
+offset_right = 380.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "My team:"
+
+[node name="Label2" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 124.0
+offset_right = 124.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Triple captain:"
+
+[node name="Label3" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 0
+offset_left = 195.0
+offset_top = 124.0
+offset_right = 309.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bench boost:"
+
+[node name="TC" type="Button" parent="."]
+layout_mode = 2
+offset_left = 126.0
+offset_top = 121.0
+offset_right = 186.0
+offset_bottom = 152.0
+toggle_mode = true
+text = "Play"
+
+[node name="BB" type="Button" parent="."]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 121.0
+offset_right = 371.0
+offset_bottom = 152.0
+toggle_mode = true
+text = "Play"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 190.0
+offset_right = -10.0
+offset_bottom = -141.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(370, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Confirm" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -101.0
+offset_right = -10.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Save your team"
+
+[node name="Error" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -131.0
+offset_right = -10.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.545098, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Loading" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 158.0
+offset_top = 200.0
+offset_right = 233.0
+offset_bottom = 223.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Loading..."
+
+[connection signal="toggled" from="TC" to="." method="_on_tc_toggled"]
+[connection signal="toggled" from="BB" to="." method="_on_bb_toggled"]
+[connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]

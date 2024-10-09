@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c3ydfcnq8qnu1"]
+
+[node name="PlayerBreakdownMatch" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -774.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="."]
+offset_left = 15.0
+offset_right = 345.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "SPO 5-0 MDH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 35.0
+offset_right = 345.0
+offset_bottom = 65.0
+
+[node name="Statistic" type="Label" parent="Stats"]
+offset_left = 10.0
+offset_right = 200.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Statistic"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Num" type="Label" parent="Stats"]
+offset_left = 200.0
+offset_right = 265.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Points" type="Label" parent="Stats"]
+offset_left = 265.0
+offset_right = 330.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Pts"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3

@@ -1,0 +1,575 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3wul2glx8pgg"]
+
+[ext_resource type="Script" path="res://create_league.gd" id="1_gld4m"]
+[ext_resource type="Texture2D" uid="uid://buimsc1npqddx" path="res://Images/Plus.png" id="3_cpbtt"]
+
+[node name="Create League" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gld4m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Page1" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Page1"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 57.0
+offset_right = 139.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Create a league"
+
+[node name="PositionsLabel" type="Label" parent="Page1"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 120.0
+offset_right = 147.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Player positions: (this cannot be edited later)"
+
+[node name="League Name" type="LineEdit" parent="Page1"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 18.0
+offset_top = 83.0
+offset_right = -25.0
+offset_bottom = 114.0
+grow_horizontal = 2
+placeholder_text = "League name"
+max_length = 40
+expand_to_text_length = true
+
+[node name="AddPosition" type="TextureButton" parent="Page1"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_top = 182.0
+offset_right = 80.0
+offset_bottom = 308.0
+grow_horizontal = 0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_cpbtt")
+
+[node name="InSquadLabel" type="Label" parent="Page1"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 156.0
+offset_right = 143.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "In squad"
+
+[node name="MinInLineupLabel" type="Label" parent="Page1"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 137.0
+offset_right = 195.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Min in lineup"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MaxInLineupLabel" type="Label" parent="Page1"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 139.0
+offset_right = 257.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Max in lineup"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Positions" type="ScrollContainer" parent="Page1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 181.0
+offset_right = -48.0
+offset_bottom = -313.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Page1/Positions"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Page2Button" type="Button" parent="Page1"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -122.0
+offset_top = -69.0
+offset_right = -28.0
+offset_bottom = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Next"
+
+[node name="Budget" type="LineEdit" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 291.0
+offset_top = -269.0
+offset_right = 358.063
+offset_bottom = -238.0
+grow_vertical = 0
+text = "100"
+max_length = 40
+expand_to_text_length = true
+
+[node name="BudgetLabel" type="Label" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 255.0
+offset_top = -296.0
+offset_right = 383.0
+offset_bottom = -270.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Team budget:"
+
+[node name="TeamSize" type="LineEdit" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 291.0
+offset_top = -189.0
+offset_right = 358.063
+offset_bottom = -158.0
+grow_vertical = 0
+text = "11"
+max_length = 40
+expand_to_text_length = true
+
+[node name="TeamSizeLabel" type="Label" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 255.0
+offset_top = -216.0
+offset_right = 383.0
+offset_bottom = -190.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Team size:"
+
+[node name="ColorRect" type="ColorRect" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -294.0
+offset_right = 240.0
+offset_bottom = -114.0
+grow_vertical = 0
+color = Color(0.458824, 0.458824, 0.458824, 1)
+
+[node name="Captains" type="CheckButton" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -294.0
+offset_right = 230.0
+offset_bottom = -263.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
+text = "Captains:"
+
+[node name="Wildcard" type="CheckButton" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -264.0
+offset_right = 230.0
+offset_bottom = -233.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
+text = "Wildcard:"
+
+[node name="FreeHit" type="CheckButton" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -234.0
+offset_right = 230.0
+offset_bottom = -203.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
+text = "Free Hit:"
+
+[node name="BenchBoost" type="CheckButton" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -204.0
+offset_right = 230.0
+offset_bottom = -173.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
+text = "Bench Boost:"
+
+[node name="AutoSubs" type="CheckButton" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -174.0
+offset_right = 230.0
+offset_bottom = -143.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
+text = "Autosubs:"
+
+[node name="PriceChanges" type="CheckButton" parent="Page1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -144.0
+offset_right = 230.0
+offset_bottom = -113.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
+text = "Price changes:"
+
+[node name="Page1Error" type="Label" parent="Page1"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 724.0
+offset_right = 316.0
+offset_bottom = 804.0
+theme_override_colors/font_color = Color(0.545098, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="Page2" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Page2"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 57.0
+offset_right = 139.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Choose scoring: (This cannot be edited later)"
+
+[node name="PointTypes" type="ScrollContainer" parent="Page2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 27.0
+offset_top = 92.0
+offset_right = -49.0
+offset_bottom = 716.0
+grow_horizontal = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Page2/PointTypes"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AddPointType" type="TextureButton" parent="Page2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_top = 99.0
+offset_right = 84.0
+offset_bottom = 225.0
+grow_horizontal = 0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_cpbtt")
+
+[node name="Page3Button" type="Button" parent="Page2"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 743.0
+offset_right = 314.0
+offset_bottom = 781.0
+text = "Next"
+
+[node name="Page2Error" type="Label" parent="Page2"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 788.0
+offset_right = 361.0
+offset_bottom = 824.0
+theme_override_colors/font_color = Color(0.545098, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="Page3" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Page3"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 57.0
+offset_right = 139.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Add players: (These can be edited later)"
+
+[node name="AddPlayer" type="TextureButton" parent="Page3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -44.0
+offset_top = 95.0
+offset_right = 81.0
+offset_bottom = 221.0
+grow_horizontal = 0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_cpbtt")
+
+[node name="PositionLabel" type="Label" parent="Page3"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 75.0
+offset_right = 216.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Position"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PriceLabel" type="Label" parent="Page3"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 75.0
+offset_right = 281.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Price"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Players" type="ScrollContainer" parent="Page3"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 34.0
+offset_top = 94.0
+offset_right = -48.0
+offset_bottom = 718.0
+grow_horizontal = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Page3/Players"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Page3Error" type="Label" parent="Page3"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 788.0
+offset_right = 361.0
+offset_bottom = 824.0
+theme_override_colors/font_color = Color(0.545098, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="Page4Button" type="Button" parent="Page3"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 743.0
+offset_right = 314.0
+offset_bottom = 781.0
+text = "Next"
+
+[node name="Page4" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Page4"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 57.0
+offset_right = 139.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Add fixtures: (These can be edited later)"
+
+[node name="AddGameweek" type="TextureButton" parent="Page4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -44.0
+offset_top = 95.0
+offset_right = 81.0
+offset_bottom = 221.0
+grow_horizontal = 0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_cpbtt")
+
+[node name="GWs" type="ScrollContainer" parent="Page4"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 23.0
+offset_top = 94.0
+offset_right = -48.0
+offset_bottom = 718.0
+grow_horizontal = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Page4/GWs"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CreateButton" type="Button" parent="Page4"]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 731.0
+offset_right = 317.0
+offset_bottom = 769.0
+text = "Create League"
+
+[node name="Page4Error" type="Label" parent="Page4"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 788.0
+offset_right = 361.0
+offset_bottom = 824.0
+theme_override_colors/font_color = Color(0.545098, 0, 0, 1)
+text = "Enter dates in GMT (not BST)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="Home" type="Button" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 70.0
+offset_bottom = 46.0
+text = "Home"
+
+[connection signal="pressed" from="Page1/AddPosition" to="." method="_on_add_position_pressed"]
+[connection signal="pressed" from="Page1/Page2Button" to="." method="_on_page_2_button_pressed"]
+[connection signal="pressed" from="Page2/AddPointType" to="." method="_on_add_point_type_pressed"]
+[connection signal="pressed" from="Page2/Page3Button" to="." method="_on_page_3_button_pressed"]
+[connection signal="pressed" from="Page3/AddPlayer" to="." method="_on_add_player_pressed"]
+[connection signal="pressed" from="Page3/Page4Button" to="." method="_on_page_4_button_pressed"]
+[connection signal="pressed" from="Page4/AddGameweek" to="." method="_on_add_gameweek_pressed"]
+[connection signal="pressed" from="Page4/CreateButton" to="." method="_on_create_button_pressed"]

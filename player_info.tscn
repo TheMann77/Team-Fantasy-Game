@@ -1,0 +1,240 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0yt2c3gbeyad"]
+
+[ext_resource type="Script" path="res://player_info.gd" id="1_evg8x"]
+[ext_resource type="Texture2D" uid="uid://bsbn0s2je8g5y" path="res://Images/Cross.png" id="2_ukyn0"]
+
+[node name="Player_info" type="Control"]
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_evg8x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.462745)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[node name="Top" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 282.0
+grow_horizontal = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Top"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.129412, 0.278431, 1)
+
+[node name="Remove" type="TextureButton" parent="Top"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -37.0
+offset_top = 8.0
+offset_right = 63.0
+offset_bottom = 108.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_ukyn0")
+
+[node name="Position" type="Label" parent="Top"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -121.0
+offset_right = 127.0
+offset_bottom = -83.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Position"
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Top"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -88.0
+offset_right = 320.0
+offset_bottom = 2.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Full Name That Might be long"
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Price" type="Label" parent="Top"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -3.0
+offset_right = 127.0
+offset_bottom = 35.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Price"
+vertical_alignment = 1
+
+[node name="TSB" type="Label" parent="Top"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = 29.0
+offset_right = 127.0
+offset_bottom = 67.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Selected by: "
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Top"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 211.0
+offset_bottom = 262.0
+grow_horizontal = 2
+
+[node name="History" type="Button" parent="Top"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -155.0
+offset_top = 221.0
+offset_bottom = 252.0
+grow_horizontal = 2
+toggle_mode = true
+text = "History"
+
+[node name="Fixtures" type="Button" parent="Top"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 221.0
+offset_right = 155.0
+offset_bottom = 252.0
+grow_horizontal = 2
+toggle_mode = true
+button_pressed = true
+text = "Fixtures"
+
+[node name="Fixtures" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 282.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Fixtures"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimeZone" type="Label" parent="Fixtures"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -53.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.431373, 0.431373, 0.431373, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Fixtures"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Fixtures/ScrollContainer"]
+layout_mode = 2
+
+[node name="History" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 282.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="History"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="History"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="History/ScrollContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="Top/Remove" to="." method="_on_remove_pressed"]
+[connection signal="pressed" from="Top/History" to="." method="_on_history_pressed"]
+[connection signal="pressed" from="Top/Fixtures" to="." method="_on_fixtures_pressed"]

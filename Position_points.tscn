@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://y8uem5v1g4im"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsatw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ymgg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 315.0
+offset_bottom = 30.0
+color = Color(0, 0.129412, 0.278431, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 8.0
+offset_right = 49.0
+offset_bottom = 30.0
+text = "Pos."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Points" type="LineEdit" parent="."]
+offset_left = 60.0
+offset_right = 186.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vsatw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ymgg")
+placeholder_text = "Points to award"
+alignment = 1
+max_length = 3
+
+[node name="Per" type="LineEdit" parent="."]
+offset_left = 197.0
+offset_right = 306.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vsatw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ymgg")
+placeholder_text = "Per # actions"
+alignment = 1
+max_length = 3

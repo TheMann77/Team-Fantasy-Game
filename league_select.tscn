@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7jff7p2xuk2x"]
+
+[ext_resource type="Script" path="res://LeagueSelect.gd" id="1_maq38"]
+
+[node name="LeagueSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_maq38")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "My leagues:"
+
+[node name="User" type="Control" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Admin leagues:"
+
+[node name="Admin" type="Control" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="JoinCreate" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 720.0
+offset_right = 370.0
+offset_bottom = 825.0
+
+[node name="JoinLeague" type="Button" parent="JoinCreate"]
+layout_mode = 2
+offset_top = 4.0
+offset_right = 350.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Join a new league"
+
+[node name="CreateLeague" type="Button" parent="JoinCreate"]
+layout_mode = 2
+offset_top = 51.0
+offset_right = 350.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Create a new league"

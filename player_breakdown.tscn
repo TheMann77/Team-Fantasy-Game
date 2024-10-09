@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhufriqd86icv"]
+
+[ext_resource type="Script" path="res://player_breakdown.gd" id="1_7h4a4"]
+[ext_resource type="Texture2D" uid="uid://dmlslastibars" path="res://Images/BlackCross.png" id="2_yesmn"]
+
+[node name="Player_breakdown" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7h4a4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.462745)
+
+[node name="Breakdown" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 212.0
+offset_right = 375.0
+offset_bottom = 267.0
+
+[node name="ColorRect2" type="ColorRect" parent="Breakdown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Breakdown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="Breakdown"]
+offset_left = 15.0
+offset_top = 7.0
+offset_right = 345.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Alex Mann"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Remove" type="TextureButton" parent="Breakdown"]
+top_level = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -55.0
+offset_top = 225.0
+offset_right = 45.0
+offset_bottom = 325.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_yesmn")
+
+[connection signal="pressed" from="Breakdown/Remove" to="." method="_on_remove_pressed"]
